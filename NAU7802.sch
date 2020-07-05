@@ -65,12 +65,12 @@ $EndComp
 $Comp
 L Device:C C6
 U 1 1 5F002C00
-P 3050 3950
-F 0 "C6" H 3165 3996 50  0000 L CNN
-F 1 "0,1uF" H 3165 3905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3088 3800 50  0001 C CNN
-F 3 "~" H 3050 3950 50  0001 C CNN
-	1    3050 3950
+P 3100 4300
+F 0 "C6" H 3215 4346 50  0000 L CNN
+F 1 "0,1uF" H 3215 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3138 4150 50  0001 C CNN
+F 3 "~" H 3100 4300 50  0001 C CNN
+	1    3100 4300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -162,9 +162,6 @@ F 3 "~" H 2750 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2850 3800 3050 3800
-Connection ~ 3050 3800
-Wire Wire Line
 	2850 3500 3050 3500
 Connection ~ 3050 3500
 Wire Wire Line
@@ -176,7 +173,7 @@ U 1 1 5F016406
 P 4100 5650
 F 0 "J2" H 4208 6031 50  0000 C CNN
 F 1 "B scale" H 4208 5940 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 4100 5650 50  0001 C CNN
+F 2 "Connector_Wago:Wago_734-135_1x05_P3.50mm_Vertical" H 4100 5650 50  0001 C CNN
 F 3 "~" H 4100 5650 50  0001 C CNN
 	1    4100 5650
 	-1   0    0    1   
@@ -191,7 +188,7 @@ Text GLabel 2350 3800 0    50   Input ~ 0
 B+
 Text GLabel 2350 4500 0    50   Input ~ 0
 B-
-Text GLabel 3050 4700 0    50   Input ~ 0
+Text GLabel 3000 4750 0    50   Input ~ 0
 GND
 Text GLabel 2450 5450 0    50   Input ~ 0
 A+
@@ -250,15 +247,14 @@ Wire Wire Line
 	2350 3800 2650 3800
 Text GLabel 3050 2900 0    50   Input ~ 0
 AVDD
-Text GLabel 3000 4950 0    50   Input ~ 0
+Text GLabel 2950 5000 0    50   Input ~ 0
 AVSS
 Wire Wire Line
 	3050 2900 3950 2900
 Wire Wire Line
-	3000 4950 3350 4950
+	2950 5000 3300 5000
 Wire Wire Line
-	3750 4850 3750 4700
-Connection ~ 3750 4700
+	3750 4850 3750 4750
 Wire Wire Line
 	4200 3200 3950 3200
 Wire Wire Line
@@ -396,34 +392,22 @@ Wire Wire Line
 $Comp
 L Device:C_Small C7
 U 1 1 5F0D672B
-P 3600 3900
-F 0 "C7" H 3692 3946 50  0000 L CNN
-F 1 "Cfilter" H 3692 3855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3600 3900 50  0001 C CNN
-F 3 "~" H 3600 3900 50  0001 C CNN
-	1    3600 3900
+P 3600 4250
+F 0 "C7" H 3692 4296 50  0000 L CNN
+F 1 "Cfilter" H 3692 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3600 4250 50  0001 C CNN
+F 3 "~" H 3600 4250 50  0001 C CNN
+	1    3600 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3950 3900 4200 3900
 Wire Wire Line
-	3050 4700 3350 4700
+	3000 4750 3300 4750
 Wire Wire Line
-	3350 4950 3350 4700
-Connection ~ 3350 4700
-Wire Wire Line
-	3350 4700 3750 4700
+	3300 5000 3300 4750
 Wire Wire Line
 	2350 4500 2650 4500
-Wire Wire Line
-	2850 4500 3050 4500
-Wire Wire Line
-	3050 4100 3050 4500
-Connection ~ 3050 4500
-Wire Wire Line
-	3050 4500 3600 4500
-Wire Wire Line
-	3050 3800 3600 3800
 Wire Wire Line
 	3750 4700 4050 4700
 Wire Wire Line
@@ -440,24 +424,6 @@ Wire Wire Line
 	3050 3200 3650 3200
 Wire Wire Line
 	3650 3500 4200 3500
-Connection ~ 3600 3800
-Wire Wire Line
-	3600 3800 4200 3800
-$Comp
-L Jumper:Jumper_2_Open JP1
-U 1 1 5F158380
-P 3600 4250
-F 0 "JP1" V 3554 4348 50  0000 L CNN
-F 1 "Jumper_2_Open" V 3645 4348 50  0000 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3600 4250 50  0001 C CNN
-F 3 "~" H 3600 4250 50  0001 C CNN
-	1    3600 4250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3600 4000 3600 4050
-Wire Wire Line
-	3600 4450 3600 4500
 Connection ~ 3600 4500
 Wire Wire Line
 	3600 4500 3950 4500
@@ -482,4 +448,71 @@ Wire Wire Line
 	4050 4700 5650 4700
 Text Notes 2250 5300 0    118  ~ 0
 Conectors\n
+Text GLabel 6950 5450 0    50   Input ~ 0
+AVDD
+Text GLabel 7800 5450 0    50   Input ~ 0
+INT
+$Comp
+L Connector:Conn_01x01_Male J5
+U 1 1 5F007783
+P 7250 5450
+F 0 "J5" H 7222 5382 50  0000 R CNN
+F 1 "AVDD" H 7222 5473 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7250 5450 50  0001 C CNN
+F 3 "~" H 7250 5450 50  0001 C CNN
+	1    7250 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J6
+U 1 1 5F008455
+P 8300 5450
+F 0 "J6" H 8408 5631 50  0000 C CNN
+F 1 "INT" H 8408 5540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8300 5450 50  0001 C CNN
+F 3 "~" H 8300 5450 50  0001 C CNN
+	1    8300 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6950 5450 7050 5450
+Wire Wire Line
+	7800 5450 8100 5450
+Wire Wire Line
+	2850 4500 3100 4500
+Wire Wire Line
+	2850 3800 3350 3800
+$Comp
+L Jumper:Jumper_3_Bridged12 JP1
+U 1 1 5F0325A1
+P 3350 4000
+F 0 "JP1" H 3350 4111 50  0000 C CNN
+F 1 "B-enabled" H 3350 4202 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3350 4000 50  0001 C CNN
+F 3 "~" H 3350 4000 50  0001 C CNN
+	1    3350 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 4750 3750 4750
+Connection ~ 3300 4750
+Connection ~ 3750 4750
+Wire Wire Line
+	3750 4750 3750 4700
+Wire Wire Line
+	3100 4450 3100 4500
+Connection ~ 3100 4500
+Wire Wire Line
+	3100 4500 3600 4500
+Wire Wire Line
+	3600 4350 3600 4500
+Wire Wire Line
+	3600 4000 3600 4150
+Wire Wire Line
+	3100 4000 3100 4150
+Wire Wire Line
+	3350 3850 3350 3800
+Connection ~ 3350 3800
+Wire Wire Line
+	3350 3800 4200 3800
 $EndSCHEMATC
