@@ -76,23 +76,23 @@ $EndComp
 $Comp
 L Device:C C2
 U 1 1 5F00379D
-P 6850 3550
-F 0 "C2" H 6965 3596 50  0000 L CNN
-F 1 "1uF" H 6965 3505 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 6888 3400 50  0001 C CNN
-F 3 "~" H 6850 3550 50  0001 C CNN
-	1    6850 3550
+P 7750 3550
+F 0 "C2" H 7865 3596 50  0000 L CNN
+F 1 "1uF" H 7865 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7788 3400 50  0001 C CNN
+F 3 "~" H 7750 3550 50  0001 C CNN
+	1    7750 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C1
 U 1 1 5F003FEF
-P 7450 3550
-F 0 "C1" H 7565 3596 50  0000 L CNN
-F 1 "1uF" H 7565 3505 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 7488 3400 50  0001 C CNN
-F 3 "~" H 7450 3550 50  0001 C CNN
-	1    7450 3550
+P 8350 3550
+F 0 "C1" H 8465 3596 50  0000 L CNN
+F 1 "1uF" H 8465 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8388 3400 50  0001 C CNN
+F 3 "~" H 8350 3550 50  0001 C CNN
+	1    8350 3550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -266,11 +266,11 @@ Text GLabel 3050 3000 0    50   Input ~ 0
 DVDD
 Wire Wire Line
 	3500 5850 3900 5850
-Text GLabel 6050 3400 2    50   Input ~ 0
+Text GLabel 6950 3400 2    50   Input ~ 0
 SDA
-Text GLabel 6050 3300 2    50   Input ~ 0
+Text GLabel 6950 3300 2    50   Input ~ 0
 SCL
-Text GLabel 6050 3100 2    50   Input ~ 0
+Text GLabel 6950 3100 2    50   Input ~ 0
 INT
 Wire Wire Line
 	5850 3850 5850 2900
@@ -282,34 +282,25 @@ Wire Wire Line
 	5650 4700 5850 4700
 Wire Wire Line
 	5400 4000 5650 4000
-Wire Wire Line
-	5400 3100 6050 3100
-Wire Wire Line
-	5400 3300 6050 3300
-Wire Wire Line
-	5400 3400 6050 3400
 $Comp
 L Device:C C3
 U 1 1 5F05C52D
-P 6450 3550
-F 0 "C3" H 6565 3596 50  0000 L CNN
-F 1 "0,1uF" H 6565 3505 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 6488 3400 50  0001 C CNN
-F 3 "~" H 6450 3550 50  0001 C CNN
-	1    6450 3550
+P 7350 3550
+F 0 "C3" H 7465 3596 50  0000 L CNN
+F 1 "0,1uF" H 7465 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7388 3400 50  0001 C CNN
+F 3 "~" H 7350 3550 50  0001 C CNN
+	1    7350 3550
 	1    0    0    -1  
 $EndComp
-Text GLabel 6350 2700 0    50   Input ~ 0
+Text GLabel 6850 2550 1    50   Input ~ 0
 AVDD
-Text GLabel 7250 2700 0    50   Input ~ 0
+Text GLabel 8150 2700 0    50   Input ~ 0
 DVDD
 Wire Wire Line
-	6350 2700 6450 2700
+	7350 2700 7350 3400
 Wire Wire Line
-	6450 2700 6450 3400
-Wire Wire Line
-	6850 2700 6850 3400
-Connection ~ 5850 4700
+	7750 2700 7750 3400
 Text GLabel 5800 5750 0    50   Input ~ 0
 DVDD
 Text GLabel 5800 5650 0    50   Input ~ 0
@@ -372,21 +363,19 @@ Wire Wire Line
 	4550 5850 5000 5850
 Wire Wire Line
 	4550 5950 5000 5950
-Connection ~ 6450 2700
-Connection ~ 6450 4700
+Connection ~ 7350 2700
+Connection ~ 7350 4700
+Connection ~ 7750 4700
 Wire Wire Line
-	5850 4700 6450 4700
-Connection ~ 6850 4700
+	7350 4700 7750 4700
 Wire Wire Line
-	6450 4700 6850 4700
+	8150 2700 8350 2700
 Wire Wire Line
-	7250 2700 7450 2700
+	8350 2700 8350 3400
 Wire Wire Line
-	7450 2700 7450 3400
+	7350 2700 7750 2700
 Wire Wire Line
-	6450 2700 6850 2700
-Wire Wire Line
-	6850 4700 7450 4700
+	7750 4700 8350 4700
 Wire Wire Line
 	3050 3000 4200 3000
 $Comp
@@ -439,11 +428,11 @@ Wire Wire Line
 	5650 4000 5650 4700
 Connection ~ 5650 4000
 Wire Wire Line
-	6450 3700 6450 4700
+	7350 3700 7350 4700
 Wire Wire Line
-	6850 3700 6850 4700
+	7750 3700 7750 4700
 Wire Wire Line
-	7450 3700 7450 4700
+	8350 3700 8350 4700
 Wire Wire Line
 	4050 4700 5650 4700
 Text Notes 2250 5300 0    118  ~ 0
@@ -515,4 +504,73 @@ Wire Wire Line
 Connection ~ 3350 3800
 Wire Wire Line
 	3350 3800 4200 3800
+Wire Wire Line
+	5850 4700 7350 4700
+Connection ~ 5850 4700
+Wire Wire Line
+	5400 3100 6950 3100
+$Comp
+L Device:Jumper_NC_Dual JP2
+U 1 1 5F0512F0
+P 6500 2850
+F 0 "JP2" H 6500 2997 50  0000 C CNN
+F 1 "Jumper_NC_Dual" H 6500 3088 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6500 2850 50  0001 C CNN
+F 3 "~" H 6500 2850 50  0001 C CNN
+	1    6500 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6500 2750 6500 2050
+Wire Wire Line
+	6500 2050 8350 2050
+Wire Wire Line
+	8350 2050 8350 2700
+Connection ~ 8350 2700
+Wire Wire Line
+	6850 2550 6850 2700
+$Comp
+L Device:R R5
+U 1 1 5F05ACB5
+P 6250 3100
+F 0 "R5" H 6320 3146 50  0000 L CNN
+F 1 "R" H 6320 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6180 3100 50  0001 C CNN
+F 3 "~" H 6250 3100 50  0001 C CNN
+	1    6250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5F05BCD1
+P 6750 3100
+F 0 "R6" H 6820 3146 50  0000 L CNN
+F 1 "R" H 6820 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 3100 50  0001 C CNN
+F 3 "~" H 6750 3100 50  0001 C CNN
+	1    6750 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3300 6750 3300
+Wire Wire Line
+	6250 2850 6250 2950
+Wire Wire Line
+	7250 2700 7350 2700
+Wire Wire Line
+	6850 2700 7350 2700
+Wire Wire Line
+	6750 2850 6750 2950
+Wire Wire Line
+	6250 3250 6250 3400
+Wire Wire Line
+	5400 3400 6250 3400
+Wire Wire Line
+	6750 3250 6750 3300
+Connection ~ 6750 3300
+Wire Wire Line
+	6750 3300 6950 3300
+Wire Wire Line
+	6250 3400 6950 3400
+Connection ~ 6250 3400
 $EndSCHEMATC
